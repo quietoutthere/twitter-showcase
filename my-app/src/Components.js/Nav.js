@@ -1,25 +1,26 @@
-import React from 'react';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+
 import Search from './Search'
 
-
 function Nav() {
-
-    return (
-      <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href={Search}>Search</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Random</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-    )
+  return (
+    <Tabs
+      defaultActiveKey="profile"
+      id="uncontrolled-tab-example"
+      className="mb-3"
+    >
+      <Tab eventKey="home" title="Home">
+        {/* <Search /> */}
+      </Tab>
+      <Tab eventKey="profile" title="Search">
+        <Search />
+      </Tab>
+      <Tab eventKey="contact" title="Random" disabled>
+        {/* <Search /> */}
+      </Tab>
+    </Tabs>
+  );
 }
 
 export default Nav;
