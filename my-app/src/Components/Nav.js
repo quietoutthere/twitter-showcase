@@ -6,7 +6,7 @@ import Search from './Search'
 function Nav() {
   return (
     <Tabs
-    defaultActiveKey="profile"
+    defaultActiveKey="home"
     id="fill-tab-example"
     className="mb-3"
     fill
@@ -14,10 +14,10 @@ function Nav() {
       <Tab eventKey="home" title="Home">
         <Home />
       </Tab>
-      <Tab eventKey="profile" title="Search">
+      <Tab eventKey="search" title="Search">
         <Search />
       </Tab>
-      <Tab eventKey="contact" title="Random">
+      <Tab eventKey="random" title="Random">
         {/* <Search /> */}
       </Tab>
     </Tabs>

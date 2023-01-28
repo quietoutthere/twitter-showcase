@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Home = () => {
+function Home() {
     
     return (
         <div className='homePage'>
             <p>Welcome to Fake Twitter</p>
+            <img src="images/twitter.png" alt="" />
         </div>
     );
     
