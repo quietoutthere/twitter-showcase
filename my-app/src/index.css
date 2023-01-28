@@ -1,3 +1,11 @@
 .App {
   text-align: center;
+  border: 1px;
+}
+
+.Header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: azure;
+  background-color: blue;
 }
