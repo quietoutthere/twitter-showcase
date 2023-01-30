@@ -1,24 +1,36 @@
 import React, {useState} from 'react';
+import DisplaySearch from './DisplaySearch';
 
 function Search() {
 
-    const [twitSearch, setTwitSearch] = useState('')
+    const [tweetSearch, setTweetSearch] = useState('')
+    const [tweetSearching, setTweetSearching] = useState('');
 
     const handleChange = (e) => {
         e.preventDefault();
-        setTwitSearch(e.target.value);
-        console.log(twitSearch)
+        setTweetSearch(e.target.value);
+    }
+
+    const fetchTweet = (e) => {
+        e.preventDefault();
+        setTweetSearching(tweetSearch);
+        console.log(tweetSearching)
     }
 
     return(
         <>
             <input type="text" 
             placeholder='Search a twit'
-            value={twitSearch}
+            value={tweetSearch}
             id='input'
             onChange={handleChange}
             required/>
-            <button>Twitify</button>
+            <button
+            onClick={fetchTweet}
+            >Twitify
+            </button>
+            <DisplaySearch 
+            tweetSearching = {tweetSearching}/>
         </>
 
     )
