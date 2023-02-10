@@ -9,7 +9,7 @@ function DisplaySearch({tweetSearching}) {
     const getTweet = async () => {
       const response = await axios.get(`https://api.twitter.com/1.1/search/tweets.json?q=${tweetSearching}`);
       const tweetID = response.status.id;
-      return console.log(tweetID)
+      return console.log(response)
 
     }
     getTweet();
