@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
   
   authAxios.get(baseUrl) 
    .then((response) => {
-    console.log(response.data.statuses.id);
+    console.log(response.data.statuses);
     res.send(response.data.statuses);
    }) .catch((error) => {
     console.log(error)
