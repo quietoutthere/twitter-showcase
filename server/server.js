@@ -21,9 +21,9 @@ app.get('/', (req, res) => {
       Authorization: `Bearer ${token}`
     }
   })
-  authAxios.request(baseUrl) 
+  authAxios.get(baseUrl) 
    .then((response) => {
-    // console.log(response.data.statuses);
+    console.log(response.data.statuses);
     res.json(response.data.statuses[0].id);
    }) .catch((error) => {
     console.log(error)
@@ -34,10 +34,10 @@ app.get('/', (req, res) => {
   
 });
 
-app.post('/search/', (req, res) => {
+app.post('/search', (req, res) => {
   const body = req.body;
-  console.log(body);
-  res.json(body);
+  console.log('search:', body);
+  res.send(body);
 })
 
 app.listen(port, () => {

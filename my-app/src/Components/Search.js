@@ -16,13 +16,8 @@ function Search() {
         e.preventDefault();
         setTweetSearching(tweetSearch);
         console.log(tweetSearching);
-        const options = {
-            method: 'GET',
-            url: 'http://localhost:5000/search',
-            params: {search: tweetSearch}
-        }
-
-        axios.request(options)
+        
+        axios.post('http://localhost:5000/search', { search: tweetSearch})
             .then(response => {
                 console.log(response.data);
         })  .catch(error => {
